@@ -2,7 +2,7 @@ web:
   build: .
   ports:
     - "1080:80"
-    - "10443:443"
+    - "1443:443"
   volumes:
     - ../flyer:/var/www/flyer
   links:

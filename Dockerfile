@@ -4,8 +4,8 @@ FROM ubuntu:14.04
 # Optional: specify the maintainer
 MAINTAINER Andres Mendez <amj.desarrollo@gmail.com>
 
-ENV LARAVEL_VERSION 5.1.*
-ENV LAST_UPDATE 2016-01-04_150000
+# ENV LARAVEL_VERSION 5.1.*
+ENV LAST_UPDATE 2016-01-06_081000
 
 # Run any command on terminal
 RUN apt-get update && \
@@ -13,7 +13,7 @@ RUN apt-get update && \
     apt-get clean && \
     update-rc.d apache2 defaults && \
     php5enmod mcrypt && \
-    php5enmod rewrite && \
+    a2enmod rewrite && \
     rm -rf /var/www/html && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
